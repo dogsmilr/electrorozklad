@@ -1,0 +1,45 @@
+body {
+  background-color: #ee8aa8; 
+}
+h1 {
+    color: #333;
+    text-align: center;
+    font-style: italic; 
+    font-size: 24px;
+  }
+  
+  p {
+    color: #666;
+    font-size: 16px;
+    text-align: center;
+    font-style: italic; 
+  }
+  
+  /* Стилі для таблиці */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: #68c834;
+  }
+  
+  /* Стилі для розгорнутих деталей */
+  .details {
+    display: none;
+  }
+  
+  .expand-button {
+    cursor: pointer;
+    color: blue;
+  }
+  
+  

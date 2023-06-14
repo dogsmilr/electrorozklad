@@ -1,0 +1,39 @@
+body {
+    background-color: #1b9241; 
+  }
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #5249d1;
+}
+
+.details {
+    display: none;
+}
+
+.expand-button {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+p{
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+}
+h1{
+    text-align: center;
+    font-style: italic;  
+}
+.element {
+background-color: red;
+}

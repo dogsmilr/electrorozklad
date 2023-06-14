@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <link rel="stylesheet" href="style.css">
+
+    <script>
+        function toggleDetails(rowId) {
+            var detailsRow = document.getElementById(rowId + '-details');
+            var expandButton = document.getElementById(rowId + '-expand-button');
+
+            if (detailsRow.style.display === 'none') {
+                detailsRow.style.display = 'table-row';
+                expandButton.innerText = 'Згорнути';
+            } else {
+                detailsRow.style.display = 'none';
+                expandButton.innerText = 'Розгорнути';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Електронний розклад занять</h1>
+    <p>Розклад 2 тиждень</p>
+    <table>
+        <tr>
+            <th>День</th>
+            <th>Час</th>
+            <th>Предмет</th>
+            <th>Викладач</th>
+            <th>Кімната</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Понеділок</td>
+            <td>9:00 - 10:30</td>
+            <td>Алгоритми та структури даних</td>
+            <td>Іванова</td>
+            <td>111</td>
+            <td>
+                <span id="1-expand-button" class="expand-button" onclick="toggleDetails(1)">Розгорнути</span>
+            </td>
+        </tr>
+        <tr id="1-details" class="details">
+            <td colspan="6">
+                <strong>Деталі про заняття: Алгоритми та структури даних</strong><br>
+                Тема: Вивчення що таке граф.<br>
+                Опис: Види графів та виконання їх..
+            </td>
+        </tr>
+        <tr>
+            <td>Понеділок</td>
+            <td>11:00 - 12:30</td>
+            <td>Фізика</td>
+            <td>Петров</td>
+            <td>102</td>
+            <td>
+                <span id="2-expand-button" class="expand-button" onclick="toggleDetails(2)">Розгорнути</span>
+            </td>
+        </tr>
+        <tr id="2-details" class="details">
+            <td colspan="6">
+                <strong>Деталі про заняття: Фізика</strong><br>
+                Тема: Електричні прилади<br>
+                Опис: Поведінка з ними і як вони працюють.
+            </td>
+        </tr>
+        <tr>
+            <td>Понеділок</td>
+            <td>12:50 - 13:20</td>
+            <td>Веб-розробка </td>
+            <td>Столяренко</td>
+            <td>301</td>
+            <td>
+                <span id="3-expand-button" class="expand-button" onclick="toggleDetails(3)">Розгорнути</span>
+            </td>
+        </tr>
+        <tr id="3-details" class="details">
+            <td colspan="6">
+                <strong>Деталі про заняття: Веб-розробка</strong><br>
+                Тема: Розробка сайту  <br>
+                Опис: Розробка сайту на тему творчість.
+            </td>
+            <tr>
+                <td>Вівторок</td>
+                <td>9:00 - 10:30</td>
+                <td>Бази даних </td>
+                <td>Діденко</td>
+                <td>301</td>
+                <td>
+                    <span id="4-expand-button" class="expand-button" onclick="toggleDetails(4)">Розгорнути</span>
+                </td>
+            </tr>
+            <tr id="4-details" class="details">
+                <td colspan="6">
+                    <strong>Деталі про заняття: Бази даних</strong><br>
+                    Тема: Бази даних   <br>
+                    Опис:Розробка та використання бази даних .
+                </td>
+                <tr>
+                    <td>Вівторок</td>
+                    <td>11:00 - 12:30</td>
+                    <td>Основи програмування </td>
+                    <td>Михайленко</td>
+                    <td>211</td>
+                    <td>
+                        <span id="5-expand-button" class="expand-button" onclick="toggleDetails(5)">Розгорнути</span>
+                    </td>
+                </tr>
+                <tr id="5-details" class="details">
+                    <td colspan="6">
+                        <strong>Деталі про заняття: Основи програмування</strong><br>
+                        Тема: Програмування на мові C++   <br>
+                        Опис:Розробка проекту на тему тестування.
+                    </td>
+                    <tr>
+                        <td>Вівторок</td>
+                        <td>12:50 - 13:20</td>
+                        <td>Комп'ютерні мережі </td>
+                        <td>Піддубний</td>
+                        <td>461</td>
+                        <td>
+                            <span id="6-expand-button" class="expand-button" onclick="toggleDetails(6)">Розгорнути</span>
+                        </td>
+                    </tr>
+                    <tr id="6-details" class="details">
+                        <td colspan="6">
+                            <strong>Деталі про заняття: Основи програмування</strong><br>
+                            Тема: Мережі  <br>
+                            Опис:основні дані про мережу.
+                        </td>
+                        <tr>
+                            <td>Середа</td>
+                            <td>9:00 - 10:30</td>
+                            <td> Фронтенд розробка</td>
+                            <td>Самойленко</td>
+                            <td>421</td>
+                            <td>
+                                <span id="7-expand-button" class="expand-button" onclick="toggleDetails(7)">Розгорнути</span>
+                            </td>
+                        </tr>
+                        <tr id="7-details" class="details">
+                            <td colspan="6">
+                                <strong>Деталі про заняття: ОФронтенд розробка</strong><br>
+                                Тема: Форнтенд розробка   <br>
+                                Опис:Впізнання , що це таке.
+                            </td>
+                            <tr>
+                                <td>Середа</td>
+                                <td>11:00 - 12:30</td>
+                                <td> Операційні системи </td>
+                                <td>Малюх</td>
+                                <td>356</td>
+                                <td>
+                                    <span id="8-expand-button" class="expand-button" onclick="toggleDetails(8)">Розгорнути</span>
+                                </td>
+                            </tr>
+                            <tr id="8-details" class="details">
+                                <td colspan="6">
+                                    <strong>Деталі про заняття:  Операційні системи</strong><br>
+                                    Тема:  Операційні системи  <br>
+                                    Опис:Розробка калькулятора та інше.
+                                </td>
+                                <tr>
+                                    <td>Середа</td>
+                                    <td>12:50 - 13:20</td>
+                                    <td>Комп'ютерна графіка </td>
+                                    <td>Яблонський</td>
+                                    <td>326</td>
+                                    <td>
+                                        <span id="9-expand-button" class="expand-button" onclick="toggleDetails(9)">Розгорнути</span>
+                                    </td>
+                                </tr>
+                                <tr id="9-details" class="details">
+                                    <td colspan="6">
+                                        <strong>Деталі про заняття: Комп'ютерна графіка</strong><br>
+                                        Тема: Розробити малюнки  <br>
+                                        Опис:Розробка малюнків  таких як велосипед.
+                                    </td>
+                                    <tr>
+                                        <td>Четверг</td>
+                                        <td>9:00 - 10:30</td>
+                                        <td>Архітектура комп'ютерів </td>
+                                        <td>Хімченко</td>
+                                        <td>318</td>
+                                        <td>
+                                            <span id="10-expand-button" class="expand-button" onclick="toggleDetails(10)">Розгорнути</span>
+                                        </td>
+                                    </tr>
+                                    <tr id="10-details" class="details">
+                                        <td colspan="6">
+                                            <strong>Деталі про заняття: Архітектура комп'ютерів</strong><br>
+                                            Тема: Вивчення бітів  <br>
+                                            Опис:Навчитися  програмувати .
+                                        </td>
+                                        <tr>
+                                            <td>Четверг</td>
+                                            <td>11:00 - 12:30</td>
+                                            <td>Системний аналіз та проектування </td>
+                                            <td>Старовраменко</td>
+                                            <td>381</td>
+                                            <td>
+                                                <span id="11-expand-button" class="expand-button" onclick="toggleDetails(11)">Розгорнути</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="11-details" class="details">
+                                            <td colspan="6">
+                                                <strong>Деталі про заняття: Системний аналіз та проектування</strong><br>
+                                                Тема: Впізнання сестемного аналізу  <br>
+                                                Опис:Навчитися розхробляти системні проекти та  дізнаватися де їх використовують у житті.
+                                            </td>
+                                            <tr>
+                                                <td>Четверг</td>
+                                                <td>12:50 - 13:20</td>
+                                                <td>Мови програмування </td>
+                                                <td>Ігнатенко</td>
+                                                <td>349</td>
+                                                <td>
+                                                    <span id="12-expand-button" class="expand-button" onclick="toggleDetails(12)">Розгорнути</span>
+                                                </td>
+                                            </tr>
+                                            <tr id="12-details" class="details">
+                                                <td colspan="6">
+                                                    <strong>Деталі про заняття:Мови програмування</strong><br>
+                                                    Тема: Програмування та розробка проектів  <br>
+                                                    Опис:Розробка проекту.
+                                                </td>
+                                                <tr>
+                                                    <td>П'ятниця</td>
+                                                    <td>9:00 - 10:30</td>
+                                                    <td>Тестування програмного забезпечення </td>
+                                                    <td>Дібров</td>
+                                                    <td>352</td>
+                                                    <td>
+                                                        <span id="13-expand-button" class="expand-button" onclick="toggleDetails(13)">Розгорнути</span>
+                                                    </td>
+                                                </tr>
+                                                <tr id="13-details" class="details">
+                                                    <td colspan="6">
+                                                        <strong>Деталі про заняття: Тестування програмного забезпечення</strong><br>
+                                                        Тема: Навчитися правильно тестувати проекти.  <br>
+                                                        Опис:Розробка зробленого проекту.
+                                                    </td>
+                                                    <tr>
+                                                        <td>П'ятниця</td>
+                                                        <td>11:00 - 12:30</td>
+                                                        <td>Інженерія програмного забезпечення </td>
+                                                        <td>Опанасенко</td>
+                                                        <td>145</td>
+                                                        <td>
+                                                            <span id="14-expand-button" class="expand-button" onclick="toggleDetails(14)">Розгорнути</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr id="14-details" class="details">
+                                                        <td colspan="6">
+                                                            <strong>Деталі про заняття: Інженерія програмного забезпечення</strong><br>
+                                                            Тема: Розробка  та програмування <br>
+                                                            Опис:Виконання лабораторної робити.
+                                                        </td>
+                                                        <tr>
+                                                            <td>П'ятниця</td>
+                                                            <td>12:50 - 13:20</td>
+                                                            <td>Кібербезпека </td>
+                                                            <td>Стародуб</td>
+                                                            <td>119</td>
+                                                            <td>
+                                                                <span id="15-expand-button" class="expand-button" onclick="toggleDetails(15)">Розгорнути</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr id="15-details" class="details">
+                                                            <td colspan="6">
+                                                                <strong>Деталі про заняття: Кібербезпека</strong><br>
+                                                                Тема: Кібербезпека  <br>
+                                                                Опис:Навчитися та вдосконалити навички  по безпеці.
+                                                            </td>  
+                                                            <a href="index.html">Повернутися на перший тиждень</a>
+          
+    </table>
+</body>
+</html>
